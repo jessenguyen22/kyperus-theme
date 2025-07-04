@@ -54,9 +54,7 @@
     >
       
       {{ content_for_layout }}
-      <div class="animate-me" style="opacity:0; transform:translateY(50px);">
-        Nội dung sẽ animate khi scroll tới!
-      </div>
+      
     </main>
 
     {% sections 'footer-group' %}
@@ -70,19 +68,6 @@
     {% if settings.quick_add or settings.mobile_quick_add %}
       {% render 'quick-add-modal' %}
     {% endif %}
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        if (window.gsap) {
-          gsap.to(".animate-me", {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power2.inOut"
-          });
-        } else {
-          console.error("GSAP not loaded!");
-        }
-      });
-    </script>
+   
   </body>
 </html>
