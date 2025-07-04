@@ -4,6 +4,7 @@
   lang="{{ request.locale.iso_code }}"
 >
   <head>
+ {%- render 'ecom_header' -%}
     {%- render 'stylesheets' -%}
 
     {%- if settings.favicon != blank -%}
@@ -69,5 +70,5 @@
       {% render 'quick-add-modal' %}
     {% endif %}
    
-  </body>
+  {%- render "ecom_footer"-%}</body>
 </html>
