@@ -402,6 +402,7 @@
         "group_6gCLzX",
         "group_Bb6Mth"
       ],
+      "disabled": true,
       "custom_css": [
         ".spacing-style {padding-top: unset;}",
         ".image-block.image-block--AOGZoNHNsYk13S0gye__image_QbRtr3 img {height: 80%; transform: translateY(15%);}"
@@ -435,6 +436,11 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "ecom_hero_section_section_UYKbfr": {
+      "type": "ecom-hero-section-section",
+      "name": "Hero Section",
+      "settings": {}
     },
     "hero_jVaWmY": {
       "type": "hero",
@@ -769,6 +775,7 @@
   },
   "order": [
     "section_pmpbFU",
+    "ecom_hero_section_section_UYKbfr",
     "hero_jVaWmY",
     "product_list_qU3bEB"
   ]
