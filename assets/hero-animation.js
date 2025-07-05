@@ -3,20 +3,7 @@
  * Simple fade effect for hero section during scroll
  */
 
-// Hàm kiểm tra và chờ GSAP load xong
-function waitForGSAP(callback, attempts = 0) {
-  const maxAttempts = 50; // Tối đa 5 giây
-  
-  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-    callback();
-  } else if (attempts < maxAttempts) {
-    setTimeout(() => {
-      waitForGSAP(callback, attempts + 1);
-    }, 100);
-  } else {
-    console.error('GSAP/ScrollTrigger failed to load after 5 seconds');
-  }
-}
+
 
 // Khởi tạo hero fade animation
 function initHeroFadeAnimation() {
