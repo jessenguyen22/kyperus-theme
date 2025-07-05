@@ -81,6 +81,13 @@
         "type": "shopify://apps/ecomposer-landing-page-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
         "disabled": false,
         "settings": {}
+      },
+      "13276880473892151362": {
+        "type": "shopify://apps/xo-builder/blocks/xo-builder/52f85ec6-4036-4682-abec-8ff877cf768b",
+        "disabled": false,
+        "settings": {
+          "xotheme": false
+        }
       }
     },
     "color_schemes": {
