@@ -9,6 +9,8 @@
  */
 {
   "current": {
+    "logo": "shopify://shop_images/logo_kyperus_w.png",
+    "logo_inverse": "shopify://shop_images/logo_kyperus_w.png",
     "type_body_font": "inter_n4",
     "type_subheading_font": "inter_n5",
     "type_heading_font": "inter_n7",
@@ -74,12 +76,19 @@
     "variant_button_radius": 14,
     "variant_button_width": "equal-width-buttons",
     "content_for_index": [],
+    "blocks": {
+      "21474836472147483647": {
+        "type": "shopify://apps/ecomposer-landing-page-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
-          "background": "#ffffff",
-          "foreground_heading": "#000000",
-          "foreground": "#000000cf",
+          "background": "#000000",
+          "foreground_heading": "#ffffff",
+          "foreground": "#ffffff",
           "primary": "#000000cf",
           "primary_hover": "#000000",
           "border": "#0000000f",
@@ -121,7 +130,7 @@
           "foreground": "#000000cf",
           "primary": "#000000cf",
           "primary_hover": "#000000",
-          "border": "#DFDFDF",
+          "border": "#dfdfdf",
           "shadow": "#000000",
           "primary_button_background": "#000000",
           "primary_button_text": "#ffffff",
@@ -347,13 +356,6 @@
           "selected_variant_hover_text_color": "#ffffff",
           "selected_variant_hover_border_color": "#1a1a1a"
         }
-      }
-    },
-    "blocks": {
-      "21474836472147483647": {
-        "type": "shopify://apps/ecomposer-landing-page-builder/blocks/app-embed/a0fc26e1-7741-4773-8b27-39389b4fb4a0",
-        "disabled": false,
-        "settings": {}
       }
     }
   },
