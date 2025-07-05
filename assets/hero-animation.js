@@ -1,3 +1,8 @@
+
+
+// DOM load
+document.addEventListener('DOMContentLoaded', initHeroFadeAnimation);
+
 function initHeroFadeAnimation() {
  try {
    // Đăng ký ScrollTrigger plugin
@@ -29,6 +34,3 @@ function initHeroFadeAnimation() {
    console.error('Error initializing hero animation:', error);
  }
 }
-
-// DOM load
-document.addEventListener('DOMContentLoaded', initHeroFadeAnimation);
