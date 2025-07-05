@@ -70,5 +70,38 @@
       {% render 'quick-add-modal' %}
     {% endif %}
    
-  {%- render "ecom_footer"-%}</body>
+  {%- render "ecom_footer"-%}
+  <script>
+    
+  // Đảm bảo GSAP và ScrollTrigger plugin đã được load
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Đợi DOM load hoàn toàn
+  document.addEventListener('DOMContentLoaded', function() {});
+    
+    // Tạo timeline với ScrollTrigger
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.hero-section',
+        start: 'top top',
+        end: '+=200%',
+        scrub: 2.5,
+        pin: true,
+        anticipatePin: 1,
+        onUpdate: self => {
+          // Callback khi scroll update (tùy chọn)
+          console.log('Scroll progress:', self.progress);
+        }
+      }
+    });
+    const heroSection = document.querySelector('.hero-section');
+    tl
+      // Fade in hero section
+      .from(heroSection, {
+        opacity: 0,
+        duration: 0.5
+      })
+
+  </script>
+  </body>
 </html>
