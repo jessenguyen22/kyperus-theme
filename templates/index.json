@@ -9,9 +9,9 @@
  */
 {
   "sections": {
-    "ecom_hero_v2_section_QLF4JG": {
-      "type": "ecom-hero-v2-section",
-      "name": "Hero-v2",
+    "ecom_hero_v4_section_aPPJVw": {
+      "type": "ecom-hero-v4-section",
+      "name": "Hero-v4",
       "settings": {}
     },
     "section_pmpbFU": {
@@ -774,7 +774,7 @@
     }
   },
   "order": [
-    "ecom_hero_v2_section_QLF4JG",
+    "ecom_hero_v4_section_aPPJVw",
     "section_pmpbFU",
     "hero_jVaWmY",
     "product_list_qU3bEB"
