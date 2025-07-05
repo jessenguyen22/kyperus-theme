@@ -1,77 +1,34 @@
-/**
- * Hero Section Scroll Animation
- * Simple fade effect for hero section during scroll
- */
-
-
-
-// Khởi tạo hero fade animation
 function initHeroFadeAnimation() {
-  try {
-    // Đăng ký ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger);
+ try {
+   // Đăng ký ScrollTrigger plugin
+   gsap.registerPlugin(ScrollTrigger);
+   
+   const tl = gsap.timeline({
+     scrollTrigger: {
+       trigger: '.hero-section',
+       start: 'top top',
+       end: '+=200%',
+       scrub: 2.5,
+       pin: true,
+     }
+   });
+   
+   // Tạo timeline với ScrollTrigger cho fade effect
+   tl.to('.hero-section', {
+     opacity: 0,
+     duration: 2,
+     ease: "power2.out"
+   }).to('.mask-wrapper', {
+     maskSize: '100% 100%',
+     maskPosition: '50% 50%',
+     duration: 2,
+     ease: "power2.inOut"
+   }, '<');
 
-    // Kiểm tra hero section có tồn tại không
-    const heroSection = document.querySelector('.hero-section');
-    if (!heroSection) {
-      console.warn('Hero section not found');
-      return;
-    }
-
-    // Tạo timeline với ScrollTrigger cho fade effect
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: '.hero-section',
-        start: 'top top',
-        end: '+=200%',
-        scrub: 2.5,
-        pin: true,
-        anticipatePin: 1,
-        onUpdate: self => {
-          console.log('Scroll progress:', self.progress);
-        },
-        onRefresh: () => {
-          console.log('ScrollTrigger refreshed');
-        }
-      }
-    });
-
-    // Simple fade out effect khi scroll
-    tl.to(heroSection, {
-      opacity: 0,
-      duration: 2,
-      ease: "power2.out"
-    });
-
-    // Refresh ScrollTrigger
-    ScrollTrigger.refresh();
-    
-    console.log('Hero fade animation initialized successfully');
-    
-  } catch (error) {
-    console.error('Error initializing hero fade animation:', error);
-  }
+ } catch (error) {
+   console.error('Error initializing hero animation:', error);
+ }
 }
 
-// Chờ DOM và GSAP load xong
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => {
-    waitForGSAP(initHeroFadeAnimation);
-  });
-} else {
-  waitForGSAP(initHeroFadeAnimation);
-}
-
-// Refresh ScrollTrigger khi resize window
-window.addEventListener('resize', () => {
-  if (typeof ScrollTrigger !== 'undefined') {
-    ScrollTrigger.refresh();
-  }
-});
-
-// Debug: Log khi scripts load
-window.addEventListener('load', () => {
-  console.log('Hero animation script loaded');
-  console.log('GSAP available:', typeof gsap !== 'undefined');
-  console.log('ScrollTrigger available:', typeof ScrollTrigger !== 'undefined');
-});
+// DOM load
+document.addEventListener('DOMContentLoaded', initHeroFadeAnimation);
