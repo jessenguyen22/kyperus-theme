@@ -9,6 +9,11 @@
  */
 {
   "sections": {
+    "ecom_hero_v2_section_QLF4JG": {
+      "type": "ecom-hero-v2-section",
+      "name": "Hero-v2",
+      "settings": {}
+    },
     "section_pmpbFU": {
       "type": "section",
       "blocks": {
@@ -437,11 +442,6 @@
         "padding-block-end": 0
       }
     },
-    "ecom_hero_section_section_UYKbfr": {
-      "type": "ecom-hero-section-section",
-      "name": "Hero Section",
-      "settings": {}
-    },
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
@@ -774,8 +774,8 @@
     }
   },
   "order": [
+    "ecom_hero_v2_section_QLF4JG",
     "section_pmpbFU",
-    "ecom_hero_section_section_UYKbfr",
     "hero_jVaWmY",
     "product_list_qU3bEB"
   ]
